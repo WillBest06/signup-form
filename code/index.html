@@ -8,36 +8,56 @@
 </head>
 <body>
     <div class="container">
-        <img src="images/smudge.jpg" alt="" class="bg-image">
-
-        <div class="form-container">
-            <form action="#" method="get">
-                <div class="form-row">
-                    <label for="fname">First name</label>
-                    <input type="text" name="fname" id="fname">
-
-                    <label for="sname">Surname</label>
-                    <input type="text" name="sname" id="sname">
-                </div>
-                
-                <div class="form-row">
-                    <label for="email">Email address</label>
-                    <input type="email" name="email" id="email">
-
-                    <label for="phone">Phone number</label>
-                    <input type="tel" name="phone" id="phone">
-                </div>
-
-                <div class="form-row">
-                    <label for="pword">Password</label>
-                    <input type="password" name="pword" id="pword">
-
-                    <label for="confpword">Confirm password</label>
-                    <input type="password" name="confpword" id="confpword">
-                </div>
-            </form>
-        </div> 
-
+        <div class="bg-image">
+            <img src="images/smudge.jpg" alt="" class="bg-image">
+        </div>
+        <div class="content">
+            <div class="form-container">
+                <h1>Sign-up form</h1>
+                <form action="#" method="get">
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="fname">First name</label>
+                            <input type="text" name="fname" id="fname" required>
+                        </div>
+            
+                        <div class="col">
+                            <label for="sname">Surname</label>
+                            <input type="text" name="sname" id="sname" required>
+                        </div>
+                    </div>
+            
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="email">Email address</label>
+                            <input type="email" name="email" id="email">
+                        </div>
+            
+                        <div class="col">
+                            <label for="phone">Phone number</label>
+                            <input type="tel" name="phone" id="phone" pattern="^(?:(?:\(?(?:0(?:0|11)\)?[\s-]?\(?|\+)44\)?[\s-]?(?:\(?0\)?[\s-]?)?)|(?:\(?0))
+                                                                               (?:(?:\d{5}\)?[\s-]?\d{4,5})|(?:\d{4}\)?[\s-]?(?:\d{5}|\d{3}[\s-]?\d{3}))|(?:\
+                                                                               d{3}\)?[\s-]?\d{3}[\s-]?\d{3,4})|(?:\d{2}\)?[\s-]?\d{4}[\s-]?\d{4}))(?:[\s-]?(?
+                                                                               :x|ext\.?|\#)\d{3,4})?$">
+                        </div>
+                    </div>
+            
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="pword">Password</label>
+                            <input type="password" name="pword" id="pword" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" required>
+                        </div>
+            
+                        <div class="col">
+                            <label for="confpword">Confirm password</label>
+                            <input type="password" name="confpword" id="confpword" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" required>
+                        </div>
+                    </div>
+            
+                    <button class="submit">Submit</button>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 </html>
